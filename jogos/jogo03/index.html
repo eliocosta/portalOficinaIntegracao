@@ -1,0 +1,86 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+
+
+
+    
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Title</title>
+    <style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#modal{
+			position: absolute;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,0.6);
+			transition: all 0.5s;
+			opacity: 0;
+			text-align: center;
+			z-index:-2;
+		}
+		
+	</style>
+
+</head>
+<body onload="btnHandler() ">
+        
+        <div id="modal"><FONT face=verdana color=#fff size=30 id=textoModal >
+        até a prateleira correspondente,<br>  com o tempo de 45 segundos.<br>  </FONT>
+            <button class="button" onclick="jogando()" id="botaoModal"></button>
+            </div>
+        
+            <FONT face=verdana color=#fff size=6><B>
+                    <DIV id=numberCountdown align=left></DIV>
+            </FONT>
+
+    <div class="vidraria vidraria1" ondrop="drop(event)" ondragover="allowDrop(event)" >
+        <p id="txtVidraria1" class="titulo"></p>
+    </div>
+    <div class="vidraria vidraria2" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <p id="txtVidraria2" class="titulo"></p>
+    </div>
+    <div class="vidraria vidraria3" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <p id="txtVidraria3" class="titulo"></p>
+    </div>
+    <div class="vidraria vidraria4" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <p id="txtVidraria4" class="titulo"></p>
+    </div>
+    <div class="vidraria vidraria5" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <p id="txtVidraria5" class="titulo"></p>
+    </div>
+    <div class="vidraria vidraria6" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <p id="txtVidraria6" class="titulo"></p>
+    </div>
+    <div class="vidraria vidraria1" id="vidraria1" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+    <div class="vidraria vidraria2" id="vidraria2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div class="vidraria vidraria3" id="vidraria3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div class="vidraria vidraria4" id="vidraria4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div class="vidraria vidraria5" id="vidraria5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div class="vidraria vidraria6" id="vidraria6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+    <div class="vidraria" id="vidrarias" ondrop="dropInicial(event)" ondragover="allowDrop(event)">
+        <img id="imgVidraria1" class="imagem" src="" draggable="true" ondragstart="drag(event)" width="100" height="150">
+        <img id="imgVidraria2" class="imagem" src="" draggable="true" ondragstart="drag(event)" width="100" height="150">
+        <img id="imgVidraria3" class="imagem" src="" draggable="true" ondragstart="drag(event)" width="100" height="150">
+        <img id="imgVidraria4" class="imagem" src="" draggable="true" ondragstart="drag(event)" width="100" height="150">
+        <img id="imgVidraria5" class="imagem" src="" draggable="true" ondragstart="drag(event)" width="100" height="150">
+        <img id="imgVidraria6" class="imagem" src="" draggable="true" ondragstart="drag(event)" width="100" height="150">
+    </div>
+   
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+
+</body>
+</html>

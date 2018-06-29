@@ -30,15 +30,13 @@
             
             
                 <div id="div-download-apk">
-                    <h4>Baixe o aplicativo QR code via google play ou .apk a versão mobile</h4>
+                    <h4>Baixe o aplicativo QR code via google play</h4>
                     <br>
-                    <a href="#"><img src="assets/img/img-playstore.png" class="img-download-apk"></a>
-                    <a href="#"><img src="assets/img/img-apk.png" class="img-download-apk"></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.londeroapps.appqrcode" target="_blank"><img src="assets/img/img-playstore.png" class="img-download-apk"></a>
                 </div>
                 <br><br>
                 <!--Modal para imagem depois da leitura do Qr-code -->
             <button class="btn btn-dark" data-toggle="modal" data-target="#exampleModalCenter">Teste Modal</button>
-            
             <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
@@ -46,8 +44,7 @@
                             <h5 class="modal-title" id="exampleModalLongTitle">Nome da vidraria</h5>
                         </div>
                             <div class="modal-body">
-                                <img id="img-qrcode" src="jogos/jogo04/assets/images/a5a7ccb2cc24dcf88565058b51694639.jpg">
-                                
+                                <p>Aqui aparece a foto da Vidraria gerada a partir do QR-code</p>
                             </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
