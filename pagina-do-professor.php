@@ -89,9 +89,10 @@ $jogadas = $daojogo->listarJogadas($pagina, $dataInicio, $dataFinal, $ra);
                 ?>
             </table>
 
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-lg-12 ">
                     <?php
+                    /*
                     $numPgs = ceil($jogadas['count']/$jogadas['step']);
                     for($x = $pagina-5; $pagina > 0 && $x < $pagina; $x++){
                         ?><a class="btn" type="button"><?php echo $x ?></a> <?php
@@ -100,10 +101,13 @@ $jogadas = $daojogo->listarJogadas($pagina, $dataInicio, $dataFinal, $ra);
                     for($x = $pagina; $x <= $numPgs; $x++){
                         
                     }
+                    */
                     ?>
                     <button class="btn btn-dark" type="button">Última</button>
                 </div>
-            </div>
+             </div>
+             -->
+
             <br>
             <button type="button" class="btn btn-dark">Imprimir</button>
         </div>
