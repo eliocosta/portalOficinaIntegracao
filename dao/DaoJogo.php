@@ -52,6 +52,7 @@ class DaoJogo extends ConnManager{
             $sql->execute();
             $jogo->getId($this->conn->lastInsertId());
         }
+        return true;
     }
 
     public function buscaJogo($chave, $valor){
@@ -110,5 +111,11 @@ class DaoJogo extends ConnManager{
             $return['status'] = 'erro';
         }
         return $return;
+    }
+
+    public function listaJogos(){
+        $sql = $this->conn->prepare("SELECT id,nome,hash_arquivo FROM jogos");
+        $sql->execute();
+        return $sql->fetchAll(PDO::FETCH_ASSOC);
     }
 }
