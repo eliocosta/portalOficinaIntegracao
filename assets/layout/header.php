@@ -34,6 +34,7 @@
             <a class="dropdown-item" href="jogo3.php">Organize as Vidrarias</a>
             <a class="dropdown-item" href="jogo4.php">App QR code</a>
             <?php
+            include_once('dao/DaoJogo.php');
             $daojogo = new DaoJogo();
             foreach ($daojogo->listaJogos() as $key => $jogo) {
               echo '<a class="dropdown-item" href="jogos/'.$jogo['hash_arquivo'].'">'.$jogo['nome'].'</a>';
