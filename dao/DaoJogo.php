@@ -77,7 +77,7 @@ class DaoJogo extends ConnManager{
     }
 
     public function listarJogadas($pagina=0, $dataInicio='', $dataFinal='', $ra=''){
-        $step = 3;
+        $step = 30;
         $limit = " LIMIT $pagina,$step";
         $query = "SELECT `usuarios`.`ra`, `usuarios`.`nome` nome_aluno, `jogos`.`nome` nome_jogo, DATE_FORMAT(`jogadas`.`data_conclusao`, '%d/%m/%Y') data_conclusao
                     FROM `jogadas`
@@ -93,6 +93,21 @@ class DaoJogo extends ConnManager{
             $return['list'] = $sql->fetchAll();
             $return['count'] = $sqlAll->rowCount();
             $return['step'] = $step;
+        }
+        return $return;
+    }
+
+    public function insereJogada($idUsuario,$idJogo){
+        if(empty($idUsuario) || empty($idJogo)){
+            return false;
+        }
+        $query = "INSERT INTO jogadas (id_usuario,id_jogo) VALUES ($idUsuario,$idJogo)";
+        $return = [];
+        if($this->conn->query($query)){
+            $return['status'] = 'ok';
+        }
+        else{
+            $return['status'] = 'erro';
         }
         return $return;
     }

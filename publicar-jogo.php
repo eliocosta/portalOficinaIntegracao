@@ -3,7 +3,7 @@ include_once "dao/DaoUsuario.php";
 session_start();
 $usuario = new DaoUsuario();
 $usuario = $usuario->getUsuario($_SESSION['id']);
-Usuario::checkPermissao(3);
+// Usuario::checkPermissao(3);
 ?><html lang="pt-br">
 <head>
     <meta charset="utf-8">
