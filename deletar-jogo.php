@@ -31,32 +31,27 @@ Usuario::checkPermissao(3);
                 <table class="table">
                     <thead class="thead-dark">
                          <tr>
-                            <th scope="col">Jogo</th>
                             <th scope="col">Nome</th>
                             <th scope="col">Ação</th>
                         </tr>
                      </thead>
                  <tbody>
                          <tr>
-                            <th scope="row">1</th>
                             <td>Encontre as Vidrarias</td>
                             <td><button type="button" class="btn btn-dark">Excluir</button></td>
                         </tr> 
             
                         <tr>
-                            <th scope="row">2</th>
                             <td>Equipe o Laboratório</td>
                             <td><button type="button" class="btn btn-dark">Excluir</button></td>
                         </tr> 
             
                         <tr>
-                            <th scope="row">3</th>
                             <td>Organize as Vidrarias</td>
                             <td><button type="button" class="btn btn-dark">Excluir</button></td>
                         </tr>
 
                         <tr>
-                            <th scope="row">4</th>
                             <td>App QR Code</td>
                             <td><button type="button" class="btn btn-dark">Excluir</button></td>
                         </tr>

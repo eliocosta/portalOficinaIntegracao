@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" href="../imagens/favicon.ico">
+    <link rel="icon" href="assets/img/favicon.ico">
 
     <title>Jogos Educacionais</title>
 
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../paginas/css/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -31,14 +31,14 @@
 
         <div class="div-jogo container">
             <h1>Nesta div é onde ficará o jogo</h1>
-            <img class="container" src="../imagens/arvore.jpg">
+            <img class="container-jogo container" src="assets/img/arvore.jpg">
         </div>
         <br>
         <br>
     </main>
 
-    <?php include_once('assets/layout/footer.html') ?>
-
-</body>
-
-</html>
+     <?php include_once('assets/layout/footer.html') ?>
+    
+    </body>
+    
+    </html>

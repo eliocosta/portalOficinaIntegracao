@@ -6,8 +6,17 @@ $daousuario = new DaoUsuario();
 $usuario = $daousuario->getUsuario($_SESSION['id']);
 Usuario::checkPermissao(2);
 
+$pagina = (!empty($_GET['pagina'])?$_GET['pagina']:0);
+$dataInicio = (!empty($_GET['dataInicio'])?:'');
+$dataFinal  = (!empty($_GET['dataFinal'])?:'');
+$ra = (!empty($_GET['ra'])?:'');
+
 $daojogo = new DaoJogo();
-$jogadas = $daojogo->listarJogadas();
+$jogadas = $daojogo->listarJogadas($pagina, $dataInicio, $dataFinal, $ra);
+
+// echo '<pre>';
+// print_r($jogadas);
+// echo '</pre>';
 
 ?><!doctype html>
 <html lang="pt-br">
@@ -59,11 +68,11 @@ $jogadas = $daojogo->listarJogadas();
                     </tr>
                 </thead>
                 <?php 
-                if(is_array($jogadas)){
+                if(is_array($jogadas['list'])){
                 ?>
                 <tbody>
                     <?php
-                    foreach ($jogadas as $row) {
+                    foreach ($jogadas['list'] as $row) {
                     ?>
                     <tr>
                         <th scope="row"><?php echo $row['ra'] ?></th>
@@ -79,24 +88,27 @@ $jogadas = $daojogo->listarJogadas();
                 }
                 ?>
             </table>
+
             <div class="row">
                 <div class="col-lg-12 ">
-                    <button class="btn btn-dark" type="button"><</button>
-                    <button class="btn btn-dark" type="button">1</button>
-                    <button class="btn btn-dark" type="button">2</button>
-                    <button class="btn btn-dark" type="button">3</button>
-                    <button class="btn btn-dark" type="button">4</button>
-                    <button class="btn btn-dark" type="button">Última</button>
-                    <button class="btn btn-dark" type="button">></button>
+                    <?php
+                    $numPgs = ceil($jogadas['count']/$jogadas['step']);
+                    for($x = 1; $x <= $numPgs; $x++){
+                        if($pagina == $x){
+                            ?><button class="btn btn-dark disabled" type="button"><?php echo $x ?></button> <?php
+                        }
+                        else{
+                            ?><button class="btn btn-dark" type="button"><?php echo $x ?></button> <?php
+                        }
+                    }
+                    ?>
                 </div>
-            </div>
+            </div>          
             <br>
             <button type="button" class="btn btn-dark">Imprimir</button>
         </div>
 
     </main>
-
-    <!-- /.container -->
 
     <?php include_once('assets/layout/footer.html') ?>
 

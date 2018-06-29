@@ -77,19 +77,23 @@ class DaoJogo extends ConnManager{
     }
 
     public function listarJogadas($pagina=0, $dataInicio='', $dataFinal='', $ra=''){
-
+        $step = 3;
+        $limit = " LIMIT $pagina,$step";
         $query = "SELECT `usuarios`.`ra`, `usuarios`.`nome` nome_aluno, `jogos`.`nome` nome_jogo, DATE_FORMAT(`jogadas`.`data_conclusao`, '%d/%m/%Y') data_conclusao
                     FROM `jogadas`
                     INNER JOIN `jogos` ON `jogadas`.`id_jogo`=`jogos`.`id`
                     INNER JOIN `usuarios` ON `jogadas`.`id_usuario`=`usuarios`.`id`";
 
-        $sql = $this->conn->prepare($query);
-        // $sql->bindValue(":id", $i);
-        $sql->execute();
+        $sqlAll = $this->conn->query($query);
+        $sql = $this->conn->query($query.$limit);
+
+        $return = [];
 
         if($sql->rowCount() > 0) {
-            return $sql->fetchAll();
+            $return['list'] = $sql->fetchAll();
+            $return['count'] = $sqlAll->rowCount();
+            $return['step'] = $step;
         }
-        return null;
+        return $return;
     }
 }

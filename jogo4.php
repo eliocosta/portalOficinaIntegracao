@@ -38,6 +38,7 @@
                 <br><br>
                 <!--Modal para imagem depois da leitura do Qr-code -->
             <button class="btn btn-dark" data-toggle="modal" data-target="#exampleModalCenter">Teste Modal</button>
+            
             <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
@@ -45,7 +46,8 @@
                             <h5 class="modal-title" id="exampleModalLongTitle">Nome da vidraria</h5>
                         </div>
                             <div class="modal-body">
-                                <p>Aqui aparece a foto da Vidraria gerada a partir do QR-code</p>
+                                <img id="img-qrcode" src="jogos/jogo04/assets/images/a5a7ccb2cc24dcf88565058b51694639.jpg">
+                                
                             </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>

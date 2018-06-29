@@ -106,14 +106,11 @@ if($_POST && isset($_FILES['arquivo'])){
         <div class="starter-template">
             <h1>Colabore com a Plataforma</h1>
             <br>
-            <p class="lead alinhamento-texto ">Aqui uma breve descrição sobre o que é o projeto dos jogos educacionais. Lorem ipsum dolor sit amet, consectetur
-                adipisicing elit. Quisquam, nostrum, facilis. Sed ducimus delectus animi maxime sequi a atque at nobis, dolor
-                quae laudantium. Consectetur saepe adipisci voluptatibus rem odio!. Lorem ipsum dolor sit amet, consectetur
-                adipisicing elit. Veniam, ad quisquam quas nobis natus temporibus mollitia. Quibusdam nesciunt ducimus omnis
-                aut placeat repellendus, cum, dolores quia quo ad dicta, in! Os slides acima é uma breve apresentação dos
-                jogos Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, suscipit placeat provident nemo quibusdam
-                culpa delectus? Fuga necessitatibus rem possimus magnam, autem, consectetur sequi corporis. Eum perspiciatis,
-                tempore sed qui Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p class="lead alinhamento-texto ">
+                        Para você, aluno, professor ou desenvolvedor que gostaria de divulgar seus trabalhos voltados a área de desenvolvimento de jogos educacionais, pode colaborar com a nossa plataforma que é meramente acadêmica, e desta forma não possui fins lucrativos!
+                        <br><br>
+                        Para participar é fácil: basta completar o formulário abaixo e enviar o seu jogo compactado .ZIP, que nós faremos a validação. Assim, se estiver dentro do propósito do portal, o jogo ficará disponivel em seguida.       
+            </p>
         </div>
 
         <div class="starter-template">
@@ -121,10 +118,9 @@ if($_POST && isset($_FILES['arquivo'])){
             <span id="campo-requerido">Campos Obrigatórios</span>
         </div>
         <div class="starter-template">
-
             <form enctype="multipart/form-data" id="formulario" method="POST">
                 <div class="row">
-                    <div class="col-sm-12">
+                    <div class="col-sm-6">
                         <div class="form-group">
                             <label for="InputTitulo">Titulo: </label>
                             <label for="" class="campo-requerido">*</label>
