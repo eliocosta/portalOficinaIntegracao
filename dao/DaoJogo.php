@@ -77,7 +77,7 @@ class DaoJogo extends ConnManager{
     }
 
     public function listarJogadas($pagina=0, $dataInicio='', $dataFinal='', $ra=''){
-        $step = 30;
+        $step = 1000;
         $limit = " LIMIT $pagina,$step";
         $query = "SELECT `usuarios`.`ra`, `usuarios`.`nome` nome_aluno, `jogos`.`nome` nome_jogo, DATE_FORMAT(`jogadas`.`data_conclusao`, '%d/%m/%Y') data_conclusao
                     FROM `jogadas`
