@@ -44,11 +44,10 @@ $usuario = $usuario->getUsuario($_SESSION['id']);
           </div>
         </div>
         <div class="carousel-item">
-          <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+          <img class="second-slide" src="jogos/cenario_equipamentos.png" alt="Second slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Equipe o Laboratório</h1><!--Jogo 2-->
-              <p class="alinhamento-texto">Encontre o local adequado de cada equipamento de segurança, deixando o laboratório em perfeito estado para utilização!</p>
+              <h1 style="color: black;">Equipe o Laboratório</h1><!--Jogo 2-->
               <p>
                 <a class="btn btn-lg btn-dark" href="jogo2.php" role="button">Jogar</a>
               </p>
@@ -56,13 +55,12 @@ $usuario = $usuario->getUsuario($_SESSION['id']);
           </div>
         </div>
         <div class="carousel-item">
-          <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+          <img class="third-slide" src="jogos/jogo03/img/cenario.jpg" alt="Third slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Organize as Vidrarias</h1><!--Jogo 3-->
-              <p class="alinhamento-texto">Coloque todas as  vidrarias em seu respectivo lugar. Uma pequena descrição da mesma vai ajudar a encontrar o lugar certo de cada uma!</p>
+              <h1 style="color: black;">Organize as Vidrarias</h1><!--Jogo 3-->
               <p>
-                <a class="btn btn-lg btn-dark" href="jogo3.php" role="button">Jogar</a>
+                <a class="btn btn-lg btn-dark" href="jogo3.html" role="button" target="_blank">Jogar</a>
               </p>
             </div>
           </div>
